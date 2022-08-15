@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /staff-scheduling-system
+WORKDIR .
 COPY package.json .
 RUN npm install
 COPY . .
