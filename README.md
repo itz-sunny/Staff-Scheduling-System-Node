@@ -28,3 +28,6 @@ A Bearer Token is required in order to make a successful api call, we'll be able
 Make sure to pass it under the request headers for all the api calls, except login/register: [authorization: Bearer XXXXXXXXXXXXXXX].
 We have two roles - [**ADMIN**, **STAFF**]
 Some APIs like delete/update are only permitted to **ADMIN**
+
+***ER Diagram***
+![alt text](https://github.com/itz-sunny/Staff-Scheduling-System-Node/blob/main/er-diagram.png?raw=true)
