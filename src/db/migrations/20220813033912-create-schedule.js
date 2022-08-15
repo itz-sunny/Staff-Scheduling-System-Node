@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Schedules', {
+    await queryInterface.createTable('schedules', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -43,8 +43,10 @@ module.exports = {
         field: 'updated_at',
       },
     });
+
+    await queryInterface.addIndex('schedules', ['user_id']);
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Schedules');
+    await queryInterface.dropTable('schedules');
   },
 };

@@ -1,7 +1,7 @@
 const app = require('./src/app.js');
 const { sequelize } = require('./src/db/models/index.js');
 const shutdownGracefully = require('./src/gracefullShutdown.js');
-const { PORT } = require('./config/config.json');
+const { PORT } = require('./config/config.js');
 
 const server = app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);

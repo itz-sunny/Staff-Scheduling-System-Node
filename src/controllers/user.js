@@ -20,7 +20,7 @@ const {
 const _ = require('lodash');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const config = require('../../config/config.json');
+const config = require('../../config/config.js');
 const moment = require('moment');
 const { isWithin1Year } = require('../utils/dateUtils.js');
 

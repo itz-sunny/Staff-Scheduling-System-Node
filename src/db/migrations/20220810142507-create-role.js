@@ -32,6 +32,8 @@ module.exports = {
         field: 'updated_at',
       },
     });
+
+    await queryInterface.addIndex('roles', ['user_id']);
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('roles');

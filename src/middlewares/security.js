@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
 const { ROLES } = require('../constants');
-const config = require('../../config/config.json');
+const config = require('../../config/config.js');
 
 const authenticate = async (req, res, next) => {
   let bearerToken = _.get(req, ['headers', 'authorization']);
