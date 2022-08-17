@@ -8,7 +8,7 @@ module.exports = {
     "username": get('MYSQLDB_USER', 'root'),
     "password": get('MYSQLDB_ROOT_PASSWORD', null),
     "database": get('MYSQLDB_DATABASE', "staff_scheduler"),
-    "host": "127.0.0.1",
+    "host": get("MYSQLDB_HOST", "127.0.0.1"),
     "dialect": "mysql"
   },
   "test": {
