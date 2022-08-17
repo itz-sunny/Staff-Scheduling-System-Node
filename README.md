@@ -4,6 +4,11 @@
 1. Make sure that you have **mysql** installed on your local machine, and it's up and running.
 1. Make sure that you have **docker** installed on your local machine, and it's up and running.
 3. Make sure to copy **.env.example** file and create a new **.env** file with its same content using values that reflects your environment.
+4. For running locally comment ***MYSQLDB_HOST*** in ***.env** and leave uncommented only when running docker
+
+## For Running using docker
+we can just run command docker-compose up in root directory of the project
+***When running for the first time*** .For now I have not integrated migration and seeders in docker so we have to manually bash into the app container cd ./src/.db and run db:migrate. This will create all the required tables and indexes. After that we have to create a seed user as admin. As app allows registration of user as ***STAFF*** only
 
 ## Run The App using Node
 We can run the whole app on our local machine by triggering the following commands:
@@ -31,3 +36,4 @@ Some APIs like delete/update are only permitted to **ADMIN**
 
 ***ER Diagram***
 ![alt text](https://github.com/itz-sunny/Staff-Scheduling-System-Node/blob/main/er-diagram.png?raw=true)
+
